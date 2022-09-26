@@ -7,21 +7,17 @@ button.addEventListener("click", function(e){
     document.getElementById("list").appendChild(subItem)
 })
 
+var red = createElement ("option") 
+
 function createDropDown(){
     const dropDown = document.createElement("select")
-    for (let i = 0; i < colors ; i++){
-        const option = createElement( "option" ) 
-        option.innerHTML = colors[i]
-        option.value = colors[i]
-        dropDown.append(option)
-    }
+  
    
     dropDown.addEventListener("onchange", function(e){
         e.target.parent.backgroundColor = e.target.value
     })
     return dropDown
 }
-
 
 function createSubItem(e){
     const subItem = document.createElement("div")
@@ -39,4 +35,20 @@ function createSubItem(e){
     return subItem
 }
 
+var blue =createElement ("option")
 
+var green = createElement ("option")
+
+red.append (dropDown)
+
+blue.append (dropDown)
+
+green.append (dropDown)
+
+green.value = colors[2]
+
+blue.value = colors[1]
+
+red.value = colors [0]
+
+red.textContent = "red"
