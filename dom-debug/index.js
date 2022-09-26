@@ -7,14 +7,35 @@ button.addEventListener("click", function(e){
     document.getElementById("list").appendChild(subItem)
 })
 
-var red = createElement ("option") 
-
 function createDropDown(){
     const dropDown = document.createElement("select")
-  
-   
-    dropDown.addEventListener("onchange", function(e){
-        e.target.parent.backgroundColor = e.target.value
+    var choice = document.createElement("option")
+    var choice2 = document.createElement("option")
+    var choice3 = document.createElement("option")
+    
+    for ( let i = 0; i < colors.length ; i++ ) {
+    choice.textContent = colors[0]
+    choice2.textContent = colors[1]
+    choice3.textContent = colors[2]
+    }
+    
+    dropDown.append(choice)
+    dropDown.append(choice2)
+    dropDown.append(choice3)
+
+        
+    dropDown.addEventListener('change', function colorChange () {
+        for (let i = 0; i < subItem.length; i++) {
+        if (dropDown.value === 'red') {
+            dropDown.parentElement.style.backgroundColor = "red"
+        }
+        else if (dropDown.value === 'blue') {
+            dropDown.parentElement.style.backgroundColor = "blue"
+        }
+        else if (dropDown.value === 'green') {
+            dropDown.parentElement.style.backgroundColor = "green"
+    }}
+        console.dir(dropDown)
     })
     return dropDown
 }
@@ -23,32 +44,19 @@ function createSubItem(e){
     const subItem = document.createElement("div")
    
     var subItemValue = document.getElementById("input").value
-   
+    document.getElementById("input").value = ""
     subItem.textContent = subItemValue
    
-    const dropDown = createDropDown()
+    const dropDown = createDropDown ()
    
     subItem.appendChild(dropDown)
-   
+
     subItem.setAttribute("class", "subItem")
    
     return subItem
+
 }
 
-var blue =createElement ("option")
+var subItem = document.getElementsByClassName ('subItem')
 
-var green = createElement ("option")
 
-red.append (dropDown)
-
-blue.append (dropDown)
-
-green.append (dropDown)
-
-green.value = colors[2]
-
-blue.value = colors[1]
-
-red.value = colors [0]
-
-red.textContent = "red"

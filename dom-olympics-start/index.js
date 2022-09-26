@@ -83,9 +83,28 @@ function colorChange () {
     }}
     }
 
-//leftM.style.backgroundColor = 'red'    
-
-
-
 dropDown.addEventListener('change', colorChange)
+
+var inputBox = document.getElementById ("input")
+inputBox.value = ""
+
+function addText () { 
+    
+    
+
+    if (dropDown.value === 'theme-one') {
+        for (let i = 0; i < leftM.length; i++) {
+            leftM[i].style.backgroundColor = 'burlywood'
+            rightM[i].style.backgroundColor = 'lightblue'
+    }}
+        else if (dropDown.value === "theme-two") {
+            for (let i = 0; i < leftM.length; i++) {
+                leftM[i].style.backgroundColor = 'red'
+                rightM[i].style.backgroundColor = 'black'
+                leftM[i].style.color = 'white'
+                rightM[i].style.color = 'white'
+        }}
+
+        }
+    
 
