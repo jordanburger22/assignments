@@ -36,20 +36,23 @@ form.addEventListener("submit", function(event){
           let list = listItem.parentNode;        
           list.removeChild(listItem);
     })
-
+    
+    var saveBtn = document.createElement ('button')
+    
+    var inputBox = document.createElement ('input')
+    
+    saveBtn.textContent = "Save"
+    
     edit.addEventListener("click" , function(){
-        
-        var editBox = document.createElement("input")
-        
-        if (edit.textContent === "edit"){
-            newDiv.append(editBox)
-            editBox.value = listItem.textContent
-            edit.textContent = "save"
-        }
-       else if (edit.textContent === "save"){
-            listItem.textContent = editBox.value
-            edit.textContent = "edit"
-            }
+        newDiv.append(inputBox)
+        inputBox.value = listItem.textContent
+        newDiv.append(saveBtn)
     })
 
+    saveBtn.addEventListener ("click", function (){
+        listItem.textContent = inputBox.value
+        inputBox.remove()
+        saveBtn.remove()
     })
+
+})
