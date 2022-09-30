@@ -29,12 +29,13 @@ form.addEventListener("submit", function(event){
     
     remove.setAttribute( "class", "button")
     edit.setAttribute( "class", "button1" )
-    newDiv.setAttribute("class" , "button")
+    newDiv.className = "button"
 
     remove.addEventListener("click", function (){
-        let listItem = this.parentNode;
-          let list = listItem.parentNode;        
-          list.removeChild(listItem);
+        // let listItem = this.parentNode;
+        //   let list = listItem.parentNode;        
+        //   list.removeChild(listItem);
+        newDiv.remove()
     })
     
     var saveBtn = document.createElement ('button')
