@@ -1,6 +1,6 @@
 var employees = []
 
-function Employee (name, jobTitle, salary, status) {
+function Employee (name, jobTitle, salary) {
     this.name = name;
     this.jobTitle = jobTitle;
     this.salary = salary
@@ -12,7 +12,7 @@ function Employee (name, jobTitle, salary, status) {
 
 var jordan = new Employee("Jordan", "Developer", "$80,000 /year" )
 
-var ryan = new Employee("Ryan", "Scuba Instructor", "$60,000 /year")
+var ryan = new Employee("Ryan", "Scuba Instructor", "$60,000 /year",)
 ryan.status = "Contract"
 
 var shanna = new Employee("Shanna", "Massage Therapist", "$75,000 /year")
