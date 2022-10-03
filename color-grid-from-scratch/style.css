@@ -1,0 +1,71 @@
+.lightpink {
+    background-color: #F5C6D6;
+    display: inline-block;
+    width: 767px;
+    height: 135px;
+}
+
+.pink {
+    background-color: #EE2E84;
+    display: inline-block;
+    width: 767px;
+    height: 135px;
+}
+
+.blue {
+    background-color: #85CFD8;
+    display: inline-block;
+    width: 767px;
+    height: 135px;
+}
+.green {
+    background-color: #8DC63F;
+    display: inline-block;
+    width: 767px;
+    height: 135px;
+}
+
+.orange {
+    background-color: #E76E34;
+    display: inline-block;
+    width: 767px;
+    height: 135px;
+}
+
+@media only screen and (min-width: 768px){
+    .lightpink{
+        width: 2515px;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+    .pink {
+        width: 615px;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+    .blue{
+        width: 1250px;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+    .green{
+        width: 1680px;
+        height: 300px;
+        margin-right: 15px;
+    }
+    .orange{
+        width: 820px;
+        height: 300px;
+    }
+    #second-pink{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    #third-pink{
+        margin-right: 15px;
+    }
+    #second-blue{
+        margin-left: 15px;
+    }
+} 
+    
