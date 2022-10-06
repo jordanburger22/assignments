@@ -54,11 +54,12 @@ if (readlineSync.keyInYN("Will you help us " +username)){
 }
 
 
-while(hero.hp > 0 && hero.monstersDefeated < 9){
+while(hero.hp > 0 && hero.monstersDefeated < 10){
     walk()
-    if (hero.monstersDefeated > 9){
-        console.log("You have cleared the forest enough to keep the village safe! Congrats you win!")
-    }
+}
+
+if (hero.monstersDefeated > 9){
+    console.log("You have cleared the forest enough to keep the village safe! Congrats you win!")
 }
 
 function walk() {
@@ -146,7 +147,7 @@ function fight(){
             readlineSync.question("You have defeated the enemy! ")
             readlineSync.question("You find a strange potion on the defeated enemy, after consuming it your hp goes up 50 ")
             readlineSync.question("You also find a an odd piece of gear, and put it in your inventory")
-            randomReward = Math.floor(Math.random() * 5) + 1
+            randomReward = Math.floor(Math.random() * 4) 
             inventory.push(rewards[randomReward])
             buff()
             hero.hp = hero.hp + 50
