@@ -21,17 +21,21 @@ for (let i = 1; i <= 100; i++){
 
  list.style.listStyle = "none"
 
- let tally = {}
+ let tally = {
+    fizz: 0,
+    buzz: 0,
+    fizzbuzz: 0,
+ }
 
  function count (){
     
     for (let i = 0; i < numbers.length; i++){
         if (numbers[i] === "fizz"){
-            
+            tally.fizz +=1
         } else if (numbers[i] === "buzz"){
-            
+            tally.buzz +=1
         } else if (numbers[i] === "fizzbuzz"){
-            
+            tally.fizzbuzz +=1
         }
     }
 
