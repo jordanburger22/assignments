@@ -1,0 +1,13 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+
+.box{
+    height: 30px;
+}
+
+#header{
+    grid-column: 1 / 11;
+}

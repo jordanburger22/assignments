@@ -1,0 +1,28 @@
+#firstDiv{
+    margin-top: 25px;
+    background-color: aqua;
+    font-size: 30px;
+    
+}
+
+#secondDiv{
+    margin-top: 50px;
+    background-color: lightcoral;
+    font-size: 30px;
+}
+
+#thirdDiv{
+    margin-top: 50px;
+    background-color: seagreen;
+    font-size: 30px;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: 1000px;
+    justify-content: space-around;
+}
+
+#body{
+    background-color: grey;
+}

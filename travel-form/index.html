@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="grid">
+        <h1 id="header">Travel Form</h1>
+        <form name="travelForm">
+            <input placeholder="First Name" name="firstName" class="box">
+            <input placeholder="Last Name" name="lastName" class="box">
+            <input type="number" placeholder="age" name="age" class="box">
+            <br></br>
+            <div>Gender:</div>
+            Male: <input type="radio" name="gender" value="Male">
+            <br>
+            Female: <input type="radio" name="gender" value="Female">
+            <br></br>
+            <select name="destination">
+                <option>Select Destination</option>
+                <option value="New York">New York</option>
+                <option value="England">England</option>
+                <option value="Sydney">Sydney</option>
+            </select>
+            <br></br>
+            <div>Diet Options:</div>
+            Vegan: <input type="checkbox" value="Vegan" name="diet">
+            <br>
+            Gluten Free: <input type="checkbox" value="Gluten Free" name="diet">
+            <br>
+            Carnivore: <input type="checkbox" value="Carnivore" name="diet">
+
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
