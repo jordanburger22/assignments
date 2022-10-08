@@ -109,3 +109,52 @@
 #all{
     background-color: ghostwhite;
 }
+
+@media only screen and (max-width: 500px){
+    #header{
+        font-size: 20px;
+        grid-column: 2 / 7;
+    }
+
+    .photos{
+        grid-column: 1;
+        margin-right: 50px;
+        position: absolute;
+        height: 30px;
+        margin-top: 60px;
+    }
+
+    .priceInput{
+        grid-column: 3;
+        margin-left: 50px;
+        grid-row: 1;
+    }
+
+    .prices{
+        grid-column: 3;
+        font-size: 15px;
+        position: absolute;
+        margin-left: 80px;
+        margin-top: 25px;
+    }
+
+    .listItems{
+        font-size: 15px;
+        grid-column: 2;
+        margin-left: 40px;
+        position: absolute;
+    }
+
+    #footer{
+        font-size: 10px;
+        display: flex;
+        justify-content: flex-start;
+        grid-row: 5;
+        height: 15px;
+    }
+
+    .totalPrice{
+        grid-column: 1;
+        font-size: 10px;
+    }
+}
