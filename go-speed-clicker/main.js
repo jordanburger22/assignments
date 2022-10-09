@@ -1,37 +1,53 @@
 const button = document.getElementById('button')
 let counter = document.getElementById('counter')
-const start = document.getElementById('startBtn')
-const reset = document.getElementById('resetBtn')
-let timer = document.getElementById('time')
 
 
-
-
-
-
-    button.addEventListener('click', function(){
-        if (timer.textContent !== '0'){
-        counter.textContent = Number(counter.textContent) + Number(1)
-        localStorage.setItem("timesClicked" , counter.textContent)
+button.addEventListener('click', function(){
+    if (countContainer.textContent !== '0'){
+    counter.textContent = Number(counter.textContent) + Number(1)
+     localStorage.setItem("timesClicked" , counter.textContent)
 }})
-
 
 let count = localStorage.timesClicked
 counter.textContent = count
 
-reset.addEventListener('click', function(){
-    timer.textContent = "30"
-})
+const countContainer = document.getElementById("time");
+const startButton = document.getElementById("startBtn");
+const stopButton = document.getElementById("stop");
+const resetButton = document.getElementById("resetBtn");
+
+var remainingTime = 10;
+
+var timer;
+
+var isStopped = true;
 
 
-let countDown = setInterval(function(){
-    timer.textContent = Number(timer.textContent) - Number(1)
-    }, 1000)
+const startTimer = () => {
+  if (isStopped) {
+    isStopped = false;
+    countContainer.innerHTML = remainingTime;
+    timer = setInterval(renderTime, 1000);
+  }
+};
 
 
+const resetTimer = () => {
+  isStopped = true;
+  clearInterval(timer);
+  remainingTime = 10;
+  countContainer.innerHTML = remainingTime;
+};
 
-function stopCountDown() {
-    clearInterval(countDown)
-}
+startButton.onclick = startTimer;
+resetButton.onclick = resetTimer;
 
-setTimeout(stopCountDown , 30000)
+const renderTime = () => {
+  remainingTime -= 1;
+  countContainer.innerHTML = remainingTime;
+  if (remainingTime === 0) {
+    isStopped = true;
+    clearInterval(timer);
+    remainingTime = 10;
+  }
+};
