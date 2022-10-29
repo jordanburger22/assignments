@@ -63,20 +63,21 @@
  
 //  console.log(shoppingSpree(wishlist)); // 227005
  
-// function flatten(arr) {
-//    test = arr.reduce(function(final , items){
-//         return final.concat(Array.isArray(items) ? flatten(items) : items)
-//     }, [])
-//     return test
-//  }
+function flatten(arr) {
+   test = arr.reduce(function(final , items){
+        return [...final, ...items]
+        //return final.concat(items)
+    }, [])
+    return test
+ }
  
-//  var arrays = [
-//      ["1", "2", "3"],
-//      [true],
-//      [4, 5, 6]
-//  ];
+ var arrays = [
+     ["1", "2", "3"],
+     [true],
+     [4, 5, 6]
+ ];
  
-//  console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
+ console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
  
 // var voters = [
 //     {name:'Bob' , age: 30, voted: true},
