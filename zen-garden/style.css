@@ -316,16 +316,16 @@ body{
         grid-column: 1 / -1;
         background-color: white;
         font-size: 15px;
-        column-count: 2;
         padding-right: 0;
         padding-top: 0;
         margin-top: 5px;
+        height: 290px;
         
     }
 
     .test{
         font-size: 15px;
-        line-height: 1.5;
+        line-height: 2;
         
     }
 
@@ -369,13 +369,16 @@ body{
         font-size: 15px;
         margin-top: 0px;
         padding-top: 0;
-        column-count: 2;
         padding-right: 0;
+        height: 230px;
         
     }
 
     #secondList{
         margin-top: 20px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70px 70px 70px;
     }    
 
     .listItem2{
@@ -388,6 +391,76 @@ body{
     }
 
     #list{
-        margin-top: 0;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70px 70px 70px 70px;
+        margin-bottom: 0;
     }
+
+    #listItemA{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #listItemB{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #listItemC{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #listItemD{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #listItemE{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #listItemF{
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    #listItemG{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    #listItemH{
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    #listItemI{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #listItemJ{
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    #listItemK{
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #listItemL{
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #listItemM{
+        grid-row: 3;
+        grid-column: 1;
+    }
+
 }
