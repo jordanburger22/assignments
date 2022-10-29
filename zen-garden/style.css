@@ -101,7 +101,6 @@ body{
 
 
 #box1{
-    margin-top: 50px;
     grid-row: 2;
     grid-column: 1;
     font-size: 15px;
@@ -113,7 +112,6 @@ body{
 }
 
 #box2{
-    margin-top: 50px;
     grid-column: 2;
     grid-row: 2;
     background: #e5ede8 100%;
@@ -125,6 +123,7 @@ body{
 
 #list{
     list-style: none;
+    margin-top: 60px;
 }
 
 .listTitle{
@@ -136,6 +135,7 @@ body{
 
 .listItem{
     border-bottom: #9cb1b3 solid 1px;
+    margin-bottom: 15px;
 }
 
 .author{
@@ -255,6 +255,10 @@ body{
     text-transform: capitalize;
 }
 
+#firstLine{
+    margin-top: 60px;
+}
+
 @media only screen and (max-width: 1132px){
    
     .header{
@@ -304,6 +308,7 @@ body{
         padding-left: 95px;
         font-size: 10px;
         margin-top: 0;
+    
     }
 
     #box2{
@@ -321,6 +326,7 @@ body{
     .test{
         font-size: 15px;
         line-height: 1.5;
+        
     }
 
     #box3{
@@ -381,4 +387,7 @@ body{
         margin-bottom: 10px;
     }
 
+    #list{
+        margin-top: 0;
+    }
 }
