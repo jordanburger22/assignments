@@ -15,7 +15,7 @@ body{
 .mainGrid{
     display: grid;
     grid-template-columns: 67% 33%;
-    grid-template-rows: 300px 800px;
+    
 }
 
 .header{
@@ -24,8 +24,7 @@ body{
     background-repeat: repeat, no-repeat, repeat;
     background-size: auto, cover, auto;
     height: 300px;
-    width: 149.2%;
-    grid-column: 1, -1;
+    grid-column: 1 / -1;
     grid-row: 1;
 }
 
@@ -62,6 +61,7 @@ body{
 }
 
 .topBtn{
+    grid-row: 1;
     grid-column: 2;
     display: flex;
     align-items: center;
@@ -131,6 +131,11 @@ body{
     font-family: 'Julius Sans One', sans-serif;
     font-size: 110%;
     color: #607476;
+    
+}
+
+.listItem{
+    border-bottom: #9cb1b3 solid 1px;
 }
 
 .author{
@@ -150,6 +155,7 @@ body{
     background-size: auto, auto, cover;
     padding-top: 15px;
     color: #325050;
+    grid-row: 3;
 }
 
 .middleBox{
@@ -165,6 +171,7 @@ body{
     padding-right: 200px;
     font-family: 'Julius Sans One', sans-serif;
     color: #607476;
+    grid-row: 3;
 
 }
 
@@ -246,4 +253,132 @@ body{
 
 #icons:hover{
     text-transform: capitalize;
+}
+
+@media only screen and (max-width: 1132px){
+   
+    .header{
+        height: 225px;
+    }
+
+    #swirl{
+        height: 80px;
+        margin-left: 250px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    #header1{
+        font-size: 40px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    #header2{
+        font-size: 20px;
+        margin-left: 60px;
+
+    }
+
+    .topBtn{
+        grid-row: 1;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+    }
+
+    #arrowBtn{
+        margin: 0;
+        width: 80px;
+    }
+
+    #designsBtn{
+        width: 100%;
+    }
+
+    #box1{
+        grid-row: 2;
+        grid-column: 1 / -1;
+        margin-left: 0px;
+        padding-left: 95px;
+        font-size: 10px;
+        margin-top: 0;
+    }
+
+    #box2{
+        grid-row: 7;
+        grid-column: 1 / -1;
+        background-color: white;
+        font-size: 15px;
+        column-count: 2;
+        padding-right: 0;
+        padding-top: 0;
+        margin-top: 5px;
+        
+    }
+
+    .test{
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    #box3{
+        grid-row: 3;
+        grid-column: 1 / -1;
+        margin-left: 0px;
+        padding-left: 95px;
+        font-size: 10px;
+        margin-top: 0;
+    }
+
+    #box5{
+        grid-row: 4;
+        grid-column: 1 / -1;
+        margin-left: 0px;
+        padding-left: 95px;
+        font-size: 10px;
+        margin-top: 0;
+    }
+    
+    #box6{
+        background-color: white;
+        position: absolute;
+    }
+
+    #outro{
+        height: 180px;
+        font-size: 20px;
+    }
+
+    #footer{
+        height: 120px;
+        font-size: 50px;
+        word-spacing: 50px;
+    }
+
+    #box4{
+        grid-row: 8;
+        grid-column: 1 / -1;
+        font-size: 15px;
+        margin-top: 0px;
+        padding-top: 0;
+        column-count: 2;
+        padding-right: 0;
+        
+    }
+
+    #secondList{
+        margin-top: 20px;
+    }    
+
+    .listItem2{
+        padding-bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .listItem{
+        margin-bottom: 10px;
+    }
+
 }
