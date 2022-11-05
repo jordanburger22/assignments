@@ -1,0 +1,62 @@
+{
+    "Appetizers":[
+        {
+            "Name": "Nachos",
+            "Ingredients": ["Corn Chips", "Jalapenos", "Nacho Cheese"],
+            "Description": "Your basic nachos with a little kick"
+        },
+        {
+            "Name": "Fried Pickles",
+            "Ingredients": ["Dill Pickles", "Ranch Breading"],
+            "Description": "Dill pickles covered in our ranch breading, deep fried to perfection"
+        }
+    ],
+    "Cold Sandwiches":[
+        {
+            "Name": "Turkey Sandwich",
+            "Ingredients": ["Mayo", "Slicked Turkey", "Lettuce", "Tomatoes"],
+            "Description": "Basic turkey sandwich"
+        },
+        {
+            "Name": "Ham Sandwich",
+            "Ingredients": ["Mayo", "Lettuce", "Honey Ham", "Mustard", "Tomatoes"],
+            "Description": "Delicious honey ham sandwich"
+        }
+    ],
+    "Hot Sandwiches":[
+        {
+            "Name": "Grilled Pastrami Sandwich",
+            "Ingredients": ["Pastrami", "Mayo", "Mustard", "Pepperjack Cheese"],
+            "Description": "Hot Pastrami Sandiwch with a little kick from the pepperjack cheese"
+        },
+        {
+            "Name": "French Dip",
+            "Ingredients": ["Roast Beef", "Swiss Cheese", "Auj Jus"],
+            "Description": "Hot roast beef sandwich with a side of Auj Jus for dipping"
+        }
+    ],
+    "Desserts":[
+        {
+            "Name": "Cheesecake",
+            "Ingredients": ["No Clue", "But its really good"],
+            "Description": "Old family recipe, best cheesecake in town"
+        },
+        {
+            "Name": "Chocolate Cake Shake",
+            "Ingredients": ["Chocolate Cake", "Vanilla Ice Cream", "Milk"],
+            "Description": "The best of both worlds, a cake plus a shake"
+        }
+    ],
+    "Drinks":[
+        {
+            "Name": "Coffee",
+            "Ingredients": ["Coffee Beans", "Water", "Creamer"],
+            "Description": "Nothing extra, just a good cup of coffee"
+        },
+        {
+            "Name": "Tea",
+            "Ingredients": ["Water", "Tea packet"],
+            "Description": "Just some tea"
+        }
+    ]
+}
