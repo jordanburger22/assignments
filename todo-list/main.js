@@ -1,6 +1,5 @@
 const listDiv = document.getElementById("list")
 const inputForms = document.inputform
-let num = document.forms.length
 
 
 function getList(){
@@ -70,18 +69,17 @@ function clear(){
 //     e.preventDefault()
 
 //     const newListItem = {
-//         title: addForm.title.value,
-//         description: addForm.description.value,
-//         price: addForm.price.value,
-//         imageUrl: addForm.imageUrl.value
+//         title:inputForms.title.value,
+//         description:inputForms.description.value,
+//         price:inputForms.price.value,
+//         imageUrl:inputForms.imageUrl.value
 //     }
-
-//     // inputForms.value = ""
 
 //     axios.post("https://api.vschool.io/jordanburger/todo", newListItem)
 //         .then(result => getList())
 //         .catch(err => console.log(err))
 // })
 
+
+
 console.log(inputForms)
-console.log(num)
