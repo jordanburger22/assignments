@@ -46,6 +46,8 @@ export default function Body(){
             <img src={tarotImage} className="tarot-image"/>
             <img src={massageImage} className="massage-image"/>
 
+            
+
             <div className="contact">
                 <div className='contact-info'>
                     <h1>Contact Me</h1>
@@ -54,21 +56,28 @@ export default function Body(){
                     <p>(435) 720-1096</p>
                 </div>
 
+
                 <div className='request-container'>
-                <form className='request-form'>
-                    <input id='request1' className="input-field" type="name" placeholder='Name'></input>
-                    <input id='request2' className="input-field" type="email" placeholder='Email'></input>
-                    <input id='request3' className="input-field" type="phone" placeholder='Phone'></input>
-                    <input id='request4' className="input-field" type="address" placeholder='Address'></input>
-                    <div className='checkboxes'>
-                        <div className='checkbox-div'>Massage: <input className="input-checkbox1" name='massage' type="checkbox" ></input></div>
-                        <div className='checkbox-div'>Reiki: <input className="input-checkbox2" name='reiki' type="checkbox"></input></div>
-                        <div className='checkbox-div'>Tarot Reading: <input className="input-checkbox3" name='tarot-reading' type="checkbox"></input></div>
-                    </div>
-                    <textarea className="input-message" rows="10" cols="20" placeholder='Message'></textarea>
-                    <button className='submit'>Submit</button>
-                </form>
-            </div>
+                    <form className='request-form'>
+                        <input id='request1' className="input-field" type="name" placeholder='Name'></input>
+                        <input id='request2' className="input-field" type="email" placeholder='Email'></input>
+                        <input id='request3' className="input-field" type="phone" placeholder='Phone'></input>
+                        <input id='request4' className="input-field" type="address" placeholder='Address'></input>
+                        <div className='checkboxes'>
+                            <div className='checkbox-div'>Massage: <input className="input-checkbox1" name='massage' type="checkbox" ></input></div>
+                            <div className='checkbox-div'>Reiki: <input className="input-checkbox2" name='reiki' type="checkbox"></input></div>
+                            <div className='checkbox-div'>Tarot Reading: <input className="input-checkbox3" name='tarot-reading' type="checkbox"></input></div>
+                        </div>
+                        <textarea className="input-message" rows="10" cols="20" placeholder='Message'></textarea>
+                        <button className='submit'>Submit</button>
+                    </form>
+                </div>
+                <div className='price-container'>
+                    <h1 className='priceHeader'>Pricing:</h1>
+                    <h4 className='prices'>Massage~$1.00 a Minute; 30, 60, 90 Sessions</h4>
+                    <h4 className='prices'>Reiki~$60 for a 1 hr session</h4>
+                    <h4 className='prices'>Tarot Reading~$50 for a 1 hr reading</h4>
+                </div>
             </div> 
         </div>
     )
