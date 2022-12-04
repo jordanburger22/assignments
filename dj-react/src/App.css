@@ -1,0 +1,13 @@
+.square{
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  
+}
+
+.App{
+  display: grid;
+  grid-template-columns: 210px 210px ;
+  grid-template-rows: 210px 210px;
+  margin-left: 40%;
+}
