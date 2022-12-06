@@ -1,0 +1,77 @@
+.form-box{
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+.form{
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.inputField{
+  height: 20px;
+  width: 75%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-self: center;
+}
+
+.textField{
+  grid-column: 1 / 3;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 10px;
+  
+}
+
+.submitBtn{
+  grid-column: 1 / 3;
+  display: flex;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+.badge-container{
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 20px;
+}
+
+.badge-header{
+  grid-column: 1 / 3;
+  height: 60px;
+  background-color: gray;
+  border-radius: 8px;
+  display: flex;
+}
+
+.header-text{
+  align-self: center;
+  margin-left: 15px;
+}
+
+.name-badge{
+  display: grid;
+  grid-column: 1 / 3;
+  grid-template-columns: 50% 50%;
+  padding: 20px;
+  border: 2px solid gray;
+  border-radius: 8px;
+}
+
+.badge-textarea{
+  grid-column: 1 / 3;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+
+.badge-info{
+  font-size: 18px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
