@@ -5,10 +5,12 @@ function App() {
 
   const [colors, setColors] = React.useState(() => ([]))
 
+  const [colorChange, setColorChange] = React.useState(()=> true)
+
   React.useEffect(()=> {
-    axios.get('https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}')
+    axios.get(`https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
       .then(response => setColors(response.data.new_color))
-  }, [])
+  }, [colorChange])
 
   console.log(colors)
 
@@ -16,9 +18,13 @@ function App() {
     backgroundColor: `#${colors}`
   }
 
+  function colorHandler(){
+    setColorChange(prevState => !prevState)
+  }
+
   return (
     <div className="App">
-      <div className='test' style={background}>
+      <div onClick={colorHandler} className='test' style={background}>
         
       </div>
     </div>
