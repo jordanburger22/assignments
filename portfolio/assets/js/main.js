@@ -114,5 +114,30 @@
 
 			});
 			
+		// Form 
+			const contactForm = document.contactForm
+			const sendBtn = document.getElementById('sendBtn')
+		
+			function sendMessage(){
+				const formData={
+					name: contactForm.name.value,
+					email: contactForm.email.value,
+					message: contactForm.message.value
+				}
 
+				const serviceID="service_r80iwak"
+				const templateID="template_m60di6o"
+				
+				emailjs.send(serviceID, templateID, formData)
+					.then((res)=>{
+							contactForm.name.value = "",
+							contactForm.email.value = "",
+							contactForm.message.value= "",
+							console.log(res),
+							alert("message sent")
+						})
+					.catch(err => console.log(err))
+			}
+
+			sendBtn.addEventListener("click", sendMessage)
 })(jQuery);

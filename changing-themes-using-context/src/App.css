@@ -1,0 +1,162 @@
+body{
+  margin: 0;
+}
+
+
+.light-header-container{
+  display: flex;
+  justify-content: space-around;
+  background-color: #cfcfcf;
+  color: black;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 65px;
+}
+
+.dark-header-container{
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 65px;
+}
+
+.rgb-header-container{
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
+  color: blue;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 65px;
+}
+
+.sideways-header-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: darkred;
+  color: wheat;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 5rem;
+}
+
+.light-body-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  top: 65px;
+  bottom: 2.5rem;
+  width: 100%;
+}
+
+.dark-body-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gray;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 65px;
+  bottom: 2.5rem;
+  width: 100%;
+}
+
+.rgb-body-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: blue;
+  color: lightgreen;
+  font-size: 30px;
+  position: absolute;
+  top: 65px;
+  bottom: 2.5rem;
+  width: 100%;
+}
+
+.sideways-body-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkgray;
+  color: black;
+  position: absolute;
+  left: 5rem;
+  right: 2.5rem;
+  height: 100%;
+  padding-top: 25px;
+  font-size: 30px;
+}
+
+.light-footer-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfcfcf;
+}
+
+.dark-footer-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.rgb-footer-container{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: blue;
+}
+
+.sideways-footer-container{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkred;
+  color: wheat;
+}
+
+.current-theme{
+  text-transform: capitalize;
+}
+
+.theme-select{
+  width: 120px;
+  height: 40px;
+  font-size: large;
+}
+
