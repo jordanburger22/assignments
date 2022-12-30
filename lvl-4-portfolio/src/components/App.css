@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+}
+
+/* AGENT LIST */
+.agent-list-container{
+    border: solid black 2px;
+    width: max-content;
+    display: flex;
+    margin: 15px;
+}
+
+.agent-list-container:hover{
+    box-shadow: 2px 2px 4px #111;
+}
+
+.agent-list-img{
+    width: 400px 
+}
+
+.agent-list-name{
+    position: absolute;
+    color: white;
+    margin-left: 10px;
+    text-shadow: 1px 1px 2px #111;
+}
+
+.agent-list{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    background-color: #364966;
+}
+
+.agent-header{
+    grid-column: 1 / -1;
+    padding: 15px;
+    text-shadow: 1px 1px 2px #111;
+    color: white;
+    font-size: 45px;
+}
+
+/* WEAPON LIST */
+.weapons-list-container{
+    border: solid black 2px;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    margin: 15px;
+    background-image: linear-gradient(1150deg, #364966, #b38c8f, #fa4454);
+    color: white;
+}
+
+.weapons-list-img{
+    width: 400px;
+}
+
+.weapon-list{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    background-color: #364966;
+}
+
+.weapons-header{
+    grid-column: 1 / -1;
+    padding: 15px;
+    text-shadow: 1px 1px 2px #111;
+    color: white;
+    font-size: 45px;
+}
+
+/* NAV BAR */
+.nav-bar{
+    height: 50px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link{
+    color: #fa4454;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-link:hover{
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer{
+    height: 20px;
+    width: 100%;
+    background-color: #111;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.footer-header{
+    color: white;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* HOME */
+
+.home-box-agent{
+    width: 400px;
+    height: 800px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100%;
+    background-image: url("https://media.valorant-api.com/playercards/3432dc3d-47da-4675-67ae-53adb1fdad5e/largeart.png");
+}
+
+.home-box-weapon{
+    width: 400px;
+    height: 800px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100%;
+    background-image: url("https://media.valorant-api.com/playercards/adbd4077-4f0f-57c7-d9cd-7e9bc4244646/largeart.png");
+}
+
+.home-main-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home-header{
+    padding: 15px;
+    text-shadow: 1px 1px 2px #111;
+    color: white;
+    font-size: 45px;
+}
+
+.home{
+    background-color: #04b3e5;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.box-h1{
+    color: #7c7c80;
+    text-shadow: 2px 2px 3px black;
+    font-size: 45px;
+}
+
+.home-p{
+    align-self: center;
+    color: #111;
+    font-size: 20px;
+}
+
+.home-box-agent:hover{
+    box-shadow: 2px 2px 4px #111;
+}
+
+.home-box-weapon:hover{
+    box-shadow: 2px 2px 4px #111;
+}
