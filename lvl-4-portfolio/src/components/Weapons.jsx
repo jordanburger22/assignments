@@ -1,13 +1,33 @@
-
+import { Link } from "react-router-dom"
+import { useContext, useState } from "react"
+import dataContext from "./dataContext"
 
 function Weapons(props){
+
+    const data = useContext(dataContext)
+    const weapons = data.weapons
+
+    
+    const weaponsList = weapons.map(weapons => (
+        <div 
+            key={weapons.uuid} 
+            className="weapons-list-container">
+                
+            <Link to={`/weapons/${weapons.uuid}`}>
+                <h1 className="weapons-list-name">{weapons.displayName}</h1>
+                
+                <img 
+                    src={weapons.displayIcon}
+                    className="weapons-list-img"
+                />
+                
+            </Link>
+        </div>
+    ))
     return(
-        <div className="weapons-list-container">
-            <img 
-                src={props.data.displayIcon}
-                className= "weapons-list-img"
-            />
-            <h1 className="weapons-list-name">{props.data.displayName}</h1>
+        <div className="weapon-list">
+            <h1 className="weapons-header">Weapons</h1> 
+            {weaponsList}
         </div>
     )
 }

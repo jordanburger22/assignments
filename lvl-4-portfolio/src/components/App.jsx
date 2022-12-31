@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react'
 import Home from './Home'
 import Agents from './Agents'
 import Weapons from './Weapons'
+import AgentDetails from './AgentDetails'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import axios from 'axios'
+import dataContext from './dataContext'
+import WeaponDetails from './WeaponDetails'
 
 function App() {
 
@@ -22,15 +25,6 @@ function App() {
       .then(res => setWeapons(res.data.data))
   }, [])
 
-  console.log(weapons)
-
-  const agentsList = agents.map(data => (
-    data.isPlayableCharacter &&
-     <Agents 
-        data= {data}
-        key={data.uuid}
-      />
-  ))
 
   const weaponList = weapons.map(data => (
     <Weapons 
@@ -39,12 +33,13 @@ function App() {
     />
   ))
 
-
- 
-
   return (
     <div className="App">
       <Router>
+        <dataContext.Provider value ={{
+          agents,
+          weapons
+        }}>
 
           <nav className='nav-bar'>
             <Link to="/" className='nav-link'
@@ -57,22 +52,25 @@ function App() {
 
           <Routes>
             <Route path='/' element={<Home />}/>
-            <Route path='/agents' element={<div className='agent-list'>
-              <h1 className='agent-header'>Agents</h1>
-              {agentsList}
-              </div>}/> 
-            <Route path='/weapons' element={<div className='weapon-list'>
-              <h1 className='weapons-header'>Weapons</h1>
-              {weaponList}
-              </div>}/>   
+
+            <Route path='/agents' element={<Agents />} />
+              
+            <Route path='/weapons' element={<Weapons/>}/>
+            
+            <Route path='/agents/:agentId' element={<AgentDetails/>}/>
+            <Route path='/weapons/:weaponId' element={<WeaponDetails/>}/>
+              
           </Routes>    
 
           <footer className='footer'>
             <h5 className='footer-header'>ValorantData</h5>
           </footer>
+        </dataContext.Provider>
       </Router>
     </div>
   )
 }
 
 export default App
+
+
