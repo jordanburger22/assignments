@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family: 'Archivo', sans-serif;
 }
 
 /* AGENT LIST */
@@ -20,10 +21,11 @@ body{
 }
 
 .agent-list-name{
-    color: white;
+    color: #fa4454;
     margin-left: 10px;
-    text-shadow: 1px 1px 2px #111;
+    text-shadow: 1px 1px 2px black;
     position: absolute;
+    
 }
 
 .agent-list{
@@ -43,15 +45,15 @@ body{
 /* WEAPON LIST */
 .weapons-list-container{
     border: solid black 2px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    
+    width: 90%;
     height: 400px;
     margin: 15px;
     background-color: #111;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .weapons-list-container:hover{
@@ -59,7 +61,7 @@ body{
 }
 
 .weapons-list-img{
-    width: 400px;
+    width: 80%;
 }
 
 .weapon-list{
@@ -78,12 +80,18 @@ body{
 
 .weapons-list-name{
     color: white;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+.weapon-link{
     text-decoration: none;
 }
 
+
 /* NAV BAR */
 .nav-bar{
-    height: 50px;
+    height: 70px;
     background-color: #111;
     display: flex;
     align-items: center;
@@ -103,7 +111,7 @@ body{
 /* FOOTER */
 
 .footer{
-    height: 20px;
+    height: 30px;
     width: 100%;
     background-color: #111;
     position: sticky;
@@ -164,7 +172,7 @@ body{
 }
 
 .box-h1{
-    color: #7c7c80;
+    color: #e6d8d8;
     text-shadow: 2px 2px 3px black;
     font-size: 45px;
 }
@@ -259,17 +267,18 @@ body{
 
 .weapon-img{
     grid-column: 1 / 3;
-    width: 800px;
+    width: 50%;
     padding-top: 80px;
 }
 
 .weapon-alt-stats{
     grid-column: 4;
     grid-row: 2;  
+    margin-top: 50px;
 }
 
 .skin-image{
-    width: 400px;
+    width: 100%;
 }
 
 .weapon-skin-h1{
@@ -293,4 +302,33 @@ body{
     grid-column: 4;
     grid-row: 1;
     margin-top: 50px;     
+}
+
+.melee-container{
+    display: flex;
+    grid-column: 1/3;
+    margin-bottom: 50px;
+}
+
+.melee-name{
+    font-size: 60px;
+    margin-left: 150px;
+}
+
+.melee-img{
+    width: 600px;
+    padding-top: 80px;
+}
+
+.skin-container{
+    width: 85%;
+    margin-bottom: 25px;
+}
+
+.gun-container{
+    display: flex;
+    grid-column: 1 / 5;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    
 }

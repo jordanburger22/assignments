@@ -26,19 +26,13 @@ function App() {
   }, [])
 
 
-  const weaponList = weapons.map(data => (
-    <Weapons 
-      data = {data}
-      key={data.uuid}
-    />
-  ))
-
   return (
     <div className="App">
       <Router>
         <dataContext.Provider value ={{
           agents,
           weapons
+          
         }}>
 
           <nav className='nav-bar'>

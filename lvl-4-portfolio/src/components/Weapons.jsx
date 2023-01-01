@@ -9,20 +9,15 @@ function Weapons(props){
 
     
     const weaponsList = weapons.map(weapons => (
-        <div 
-            key={weapons.uuid} 
-            className="weapons-list-container">
-                
-            <Link to={`/weapons/${weapons.uuid}`}>
-                <h1 className="weapons-list-name">{weapons.displayName}</h1>
-                
-                <img 
-                    src={weapons.displayIcon}
-                    className="weapons-list-img"
-                />
-                
-            </Link>
-        </div>
+        <Link to={`/weapons/${weapons.uuid}`} className="weapon-link" key={weapons.uuid}>
+            <div className="weapons-list-container">
+                    <h1 className="weapons-list-name">{weapons.displayName}</h1>
+                    <img 
+                        src={weapons.displayIcon}
+                        className="weapons-list-img"
+                    />
+            </div>
+         </Link>
     ))
     return(
         <div className="weapon-list">

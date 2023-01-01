@@ -21,8 +21,8 @@ function AgentDetails(){
         background: `linear-gradient(50deg, ${hashtagColor})`
     }
     
-    const ability = agentAbilities.map(ability => (
-        <div className="ability-container">
+    const ability = agentAbilities.map((ability, i) => (
+        <div className="ability-container" key={i}>
             <img className="ability-icon" src={ability.displayIcon}/>
             <div className="ability-text">
                 <h4 className="ability-text-header">{ability.displayName}</h4>
