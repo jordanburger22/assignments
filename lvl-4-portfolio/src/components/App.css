@@ -50,7 +50,7 @@ body{
     
     height: 400px;
     margin: 15px;
-    background-image: linear-gradient(1150deg, #364966, #b38c8f, #fa4454);
+    background-color: #111;
     color: white;
 }
 
@@ -160,7 +160,7 @@ body{
     background-color: #04b3e5;
     display: flex;
     flex-direction: column;
-    padding-bottom: 50px;
+    padding: 100px;
 }
 
 .box-h1{
@@ -184,11 +184,6 @@ body{
     box-shadow: 2px 2px 4px #111;
 }
 
-.placeholder{
-    font-size: 25px;
-    padding: 25px;
-    color: #111;
-}
 
 /* AGENT DETAIL CARD */
 .agent-card-container{
@@ -249,4 +244,53 @@ body{
 .back-to-agents:hover{
     font-weight: bold;
     
+}
+
+/* WEAPON DATA CARD */
+
+.weapon-data-container{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    padding: 20px;
+    background-color: #364966;
+    color: white;
+    text-shadow: 1px 1px 2px #111;
+}
+
+.weapon-img{
+    grid-column: 1 / 3;
+    width: 800px;
+    padding-top: 80px;
+}
+
+.weapon-alt-stats{
+    grid-column: 4;
+    grid-row: 2;  
+}
+
+.skin-image{
+    width: 400px;
+}
+
+.weapon-skin-h1{
+    grid-column: 1/5;
+    font-size: 50px;
+    text-shadow: 1px 1px 2px #111;
+}
+
+.weapon-basic-data{
+    font-size: 30px;
+}
+
+.back-to-weapons{
+    grid-row: 1;
+    grid-column: 4;
+    width: min-content;
+    height: min-content;
+}
+
+.weapon-base-stats{
+    grid-column: 4;
+    grid-row: 1;
+    margin-top: 50px;     
 }

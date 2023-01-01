@@ -19,7 +19,6 @@ function Home(){
                     <h1 className="box-h1">Weapons</h1>
                 </div>
             </div>
-            <p className="placeholder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quasi quis obcaecati fugit, ea qui sint debitis eius, ipsa adipisci enim, dolor tempora cumque ipsam illum optio. Inventore, veritatis ad!</p>
         </div>
     )
 }
