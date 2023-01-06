@@ -33,4 +33,19 @@ movieRouter.route("/")
         res.send(`Succesfully added ${newMovie.title}`)
     })
 
+
+movieRouter.get("/:movieId", (req, res) => {
+    const movieId = req.params.movieId
+    const foundMovie = movies.find(movie => movie._id === movieId)
+    res.send(foundMovie)
+})
+
+
+movieRouter.get("/search/genre", (req, res) => {
+    const genre = req.query.genre
+    const filteredMovies = movies.filter( movie => movie.genre === genre)
+    res.send(filteredMovies)
+})
+
+
 module.exports = movieRouter
