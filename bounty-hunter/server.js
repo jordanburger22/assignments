@@ -5,6 +5,6 @@ app.use(express.json())
 
 app.use('/bounties', require('./routes/bounties.js'))
 
-app.listen(9000, () => {
+app.listen(5000, () => {
     console.log('server is running on port 9000')
 })
