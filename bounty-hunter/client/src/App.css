@@ -1,0 +1,27 @@
+body{
+  margin: 0;
+}
+
+.bountyList-container{
+  margin: 15px;
+  border: black 2px solid;
+  padding: 10px;
+}
+
+.bounty-type{
+  font-size: 18px;
+}
+
+.bounty-name{
+  font-size: 27px;
+}
+
+p{
+  font-size: 17px;
+}
+
+.new-bounty-container{
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}

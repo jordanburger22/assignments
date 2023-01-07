@@ -6,17 +6,25 @@ const bounties = [
     {
         firstName: 'Luke',
         lastName: 'Skywalker',
-        isLiving: true,
-        bounty: '30000 credits',
+        isLiving: "true",
+        bounty: '30000',
         type: 'Jedi',
         _id: uuidv4()
     },
     {
         firstName: 'Darth',
         lastName: 'Maul',
-        isLiving: true,
-        bounty: '20000 credits',
-        type: 'sith',
+        isLiving: "true",
+        bounty: '20000',
+        type: 'Sith',
+        _id: uuidv4()
+    },
+    {
+        firstName: 'Obi-Wan',
+        lastName: 'Kenobi',
+        isLiving: "false",
+        bounty: '5000',
+        type: 'Jedi',
         _id: uuidv4()
     }
 ]
@@ -30,7 +38,7 @@ bountyRouter.route("/")
         const newBounty = req.body
         newBounty._id = uuidv4()
         bounties.push(newBounty)
-        res.send('Bounty succesfully added.')
+        res.send(newBounty)
     })
 
 bountyRouter.delete("/:bountyId", (req, res) => {
