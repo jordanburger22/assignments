@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/jordanburger22/assignments#readme",
   "dependencies": {
+    "express": "^4.18.2",
+    "init": "^0.1.2",
+    "mongoose": "^6.8.4",
     "readline-sync": "^1.4.10"
   }
 }
