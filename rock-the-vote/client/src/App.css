@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    background-color: silver;
+}
+
+/* Nav */
+
+.nav-container{
+    height: 80px;
+    width: 100%;
+    background-color: crimson;display: flex;
+    align-items: center;
+}
+
+.nav-link{
+    color: black;
+    margin-left: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Auth Form  */
+
+.auth-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+    height: 400px;
+    width: 300px;
+    border: solid black 1px;
+}
+
+.auth-form-container > input{
+    margin-bottom: 15px;
+}
+
+/* Auth */
+
+.auth-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Post Form */
+
+.post-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    height: 500px;
+    justify-content: center;
+    width: 400px;
+    background-color: crimson;
+    
+}
+
+.post-form-container > input{
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+.post-form-container > textarea{
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+/* Profile */
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.vote-button-container{
+    display: flex;
+    align-items: center;
+    width: 700px;
+}
+
+.vote-button-container > button{
+    margin-left: 15px;
+}
+
+.vote-button-container > p {
+    margin-left: 3px;
+}
+
+.profile-post-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.post-container{
+    border: solid black 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.public-container{
+    padding: 20px;
+}
