@@ -8,7 +8,8 @@ body{
 .nav-container{
     height: 80px;
     width: 100%;
-    background-color: crimson;display: flex;
+    background-color: crimson;
+    display: flex;
     align-items: center;
 }
 
@@ -57,7 +58,6 @@ body{
     justify-content: center;
     width: 400px;
     background-color: crimson;
-    
 }
 
 .post-form-container > input{

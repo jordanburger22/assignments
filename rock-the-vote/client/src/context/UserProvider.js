@@ -136,8 +136,6 @@ export default function UserProvider(props){
         .catch(err => console.log(err))
     }
 
-    console.log(userState)
-
     return(
         <UserContext.Provider
             value={{
