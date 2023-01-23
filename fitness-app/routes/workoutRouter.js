@@ -47,4 +47,16 @@ WorkoutRouter.put('/:workoutId' , (req, res, next) => {
     )
 })
 
+//Delete workout
+
+WorkoutRouter.delete('/:workoutId' , (req, res, next) => {
+    Workout.findOneAndDelete({_id: req.params.workoutId}, (err, deletedWorkout) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(`succesfully removed workout ${deletedWorkout._id}`)
+    })
+})
+
 module.exports = WorkoutRouter

@@ -1,11 +1,46 @@
+import { useState } from "react"
+
+
+
 
 function NewWorkoutForm(props){
 
-    const {handleChange, exerciseInputs} = props
+    const {onSubmit, name, weightLifted, reps, sets, distance, time, id, btnText} = props
+
+    const [exerciseInputs, setExerciseInputs] = useState({
+        name: name || '',
+        weightLifted: weightLifted || '',
+        reps: reps || '',
+        sets: sets || '',
+        distance: distance || '',
+        time: time || ''
+    })
+
+    function handleSubmit(e){
+        e.preventDefault()
+        onSubmit(id, exerciseInputs)
+        props.changeToggle && props.changeToggle()
+        setExerciseInputs({
+            name: name || '',
+            weightLifted: weightLifted || '',
+            reps: reps || '',
+            sets: sets || '',
+            distance: distance || '',
+            time: time || ''
+        })
+    }
+
+ 
+    function handleChange(e){
+        const {name, value} = e.target
+        setExerciseInputs(prevInputs => ({
+            ...prevInputs,
+            [name]: value
+        }))
+    }
 
     return(
-        
-        <form className="exercise-inputs">
+        <form className="exercise-inputs" onSubmit={handleSubmit}>
             <label htmlFor="exercise">Exercise: </label>
             <input 
                 id="exercise"
@@ -28,7 +63,7 @@ function NewWorkoutForm(props){
             <label htmlFor="reps">Reps: </label>
             <input 
                 id="reps"
-                type='text'
+                type='number'
                 name="reps"
                 onChange={handleChange}
                 value={exerciseInputs.reps}
@@ -37,7 +72,7 @@ function NewWorkoutForm(props){
             <label htmlFor="sets">Sets: </label>
             <input 
                 id="sets"
-                type='text'
+                type='number'
                 name="sets"
                 onChange={handleChange}
                 value={exerciseInputs.sets}
@@ -62,7 +97,7 @@ function NewWorkoutForm(props){
                 onChange={handleChange}
                 value={exerciseInputs.time}
             />
-
+            <button>{btnText}</button>
         </form>
     )
 }

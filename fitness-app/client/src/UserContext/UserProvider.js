@@ -20,11 +20,19 @@ export default function UserProvider(props){
         errMsg: ""
     }
 
+    const latestWorkout = {
+        name: '',
+        date: Date
+
+    }
+
     const [userState, setUserState] = useState(initState)
 
     const [baseExercises, setBaseExercises] = useState([])
 
     const [userExercises, setUserExercises] = useState([])
+
+    const [newWorkoutId, setNewWorkoutId] = useState(latestWorkout)
 
     function handleAuthErr(errMsg){
         setUserState(prevUserState => ({
@@ -109,7 +117,49 @@ export default function UserProvider(props){
 
     function getUserExercises(workoutId){
         userAxios.get(`/profile/exercises/${workoutId}`)
-            .then(res => setUserExercises(res.data))
+            .then(res => {
+                setUserExercises(res.data)
+                setUserState(prevUserState => ({
+                    ...prevUserState,
+                    workouts: [...prevUserState.workouts, res.data]
+                }))
+            })
+            .catch(err => console.dir(err.response.data.errMsg))
+    }
+
+    function addNewWorkout(newWorkout){
+        userAxios.post("/profile/workouts", newWorkout)
+            .then(res => setNewWorkoutId(res.data))
+            .catch(err => console.dir(err.response.data.errMsg))
+    }
+
+    function addNewExercise(workoutId, newExercise){
+        userAxios.post(`/profile/exercises/${workoutId}`, newExercise)
+            .then(res => setUserExercises(prevExercises => [...prevExercises, res.data]))
+            .catch(err => console.dir(err.response.data.errMsg))
+    }
+
+    function deleteExercisesbyWorkout(workoutId){
+        userAxios.delete(`/profile/exercises/workout/${workoutId}`)
+            .then(res => console.log(res))
+            .catch(err => console.dir(err.response.data.errMsg))
+    }
+
+    function deleteWorkout(workoutId){
+        userAxios.delete(`/profile/workouts/${workoutId}`)
+            .then(res => setUserState(prevUserState => ({...prevUserState, workouts: prevUserState.workouts.filter(workout => workoutId !== workout._id)})))
+            .catch(err => console.dir(err.response.data.errMsg))
+    }
+
+    function editExercise(exerciseId, update){
+        userAxios.put(`/profile/exercises/${exerciseId}`, update)
+            .then(res => setUserExercises(prevExercises => prevExercises.map(exercise => exerciseId !== exercise._id ? exercise : res.data)))
+            .catch(err => console.dir(err.response.data.errMsg))
+    }
+
+    function deleteOneExercise(exerciseId){
+        userAxios.delete(`/profile/exercises/${exerciseId}`)
+            .then(res => setUserExercises(prevExercises => prevExercises.filter(exercise => exerciseId !== exercise._id)))
             .catch(err => console.dir(err.response.data.errMsg))
     }
 
@@ -126,7 +176,15 @@ export default function UserProvider(props){
                 filterExercises,
                 getWorkouts,
                 getUserExercises,
-                userExercises
+                userExercises,
+                addNewWorkout,
+                newWorkoutId,
+                addNewExercise,
+                deleteExercisesbyWorkout,
+                deleteWorkout,
+                deleteOneExercise,
+                editExercise
+                
             }}
         >
             {props.children}

@@ -10,6 +10,7 @@ import WorkoutLog from './components/WorkoutLog';
 import LogWorkout from './components/LogWorkout';
 import AllExercises from './components/AllExercises';
 import WorkoutDetails from './components/WorkoutDetails';
+import AddUserExercise from './components/AddUserExercise';
 
 function App() {
 
@@ -22,7 +23,14 @@ function App() {
     workouts,
     logout,
     getUserExercises,
-    userExercises
+    userExercises,
+    addNewWorkout, 
+    newWorkoutId,
+    addNewExercise,
+    deleteExercisesbyWorkout,
+    deleteWorkout,
+    deleteOneExercise,
+    editExercise
   } = useContext(userContext)
 
   useEffect(() => {
@@ -47,7 +55,7 @@ function App() {
 
         <Route path='/log' element={
           <ProtectedRoute token={token}>
-            <LogWorkout baseExercises={baseExercises}/>
+            <LogWorkout addNewWorkout={addNewWorkout} newWorkoutId={newWorkoutId}/>
           </ProtectedRoute>}
         />
 
@@ -55,6 +63,7 @@ function App() {
           <ProtectedRoute token={token}>
             <WorkoutLog 
               workouts={workouts}
+              getWorkouts={getWorkouts}
             />
           </ProtectedRoute>}
         />
@@ -71,9 +80,28 @@ function App() {
 
         <Route path='/pastworkouts/:workoutId' element={
           <ProtectedRoute token={token}>
-            <WorkoutDetails getUserExercises={getUserExercises} userExercises = {userExercises}/>
+            <WorkoutDetails 
+              getUserExercises={getUserExercises} 
+              userExercises = {userExercises}
+              deleteWorkout= {deleteWorkout}
+              deleteExercisesbyWorkout= {deleteExercisesbyWorkout}
+              deleteOneExercise= {deleteOneExercise}
+              editExercise = {editExercise}
+              />
+              
           </ProtectedRoute>}
         />
+
+        <Route path='/log/addexercise/:workoutId' element={
+          <ProtectedRoute token={token}>
+            <AddUserExercise 
+              userExercises= {userExercises} 
+              addNewExercise = {addNewExercise} 
+              getUserExercises= {getUserExercises}
+              deleteOneExercise ={deleteOneExercise}
+              editExercise = {editExercise}
+              />
+          </ProtectedRoute>}/>
 
 
       </Routes>

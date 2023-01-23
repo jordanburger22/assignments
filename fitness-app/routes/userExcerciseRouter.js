@@ -29,5 +29,51 @@ UserExerciseRouter.post('/:workoutId', (req, res, next) => {
     })
 })
 
+//Update Exercise
+
+UserExerciseRouter.put('/:exerciseId', (req, res, next) => {
+    UserExercise.findOneAndUpdate(
+        {_id: req.params.exerciseId},
+        req.body,
+        {new: true},
+        (err, updatedExercise) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedExercise)
+        }
+    )
+})
+
+//Delete one Exercise
+
+UserExerciseRouter.delete('/:exerciseId', (req, res, next) => {
+    UserExercise.findOneAndDelete(
+        {_id: req.params.exerciseId},
+        (err, deletedExercise) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send('Exercise succesfully delted')
+        }
+    )
+})
+
+// Delete all exercises by workoutId
+
+UserExerciseRouter.delete('/workout/:workoutId', (req, res, next) => {
+    UserExercise.deleteMany(
+        {workout: req.params.workoutId},
+        (err, deletedExercises) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send('exercises deleted')
+        }
+    )
+})
 
 module.exports = UserExerciseRouter

@@ -7,7 +7,7 @@ function Navbar(props){
             <h1>GitFit</h1>
             <Link className="nav-link" to='/home'>Home</Link>
             <Link className="nav-link" to='/log'>Log Workout</Link>
-            <Link onClick={getWorkouts} className="nav-link" to='/pastworkouts'>Past Workouts</Link>
+            <Link className="nav-link" to='/pastworkouts'>Past Workouts</Link>
             <Link className="nav-link" to='/allexercises'>Exercises</Link>
             <button onClick={logout}>Log Out</button>
         </nav>

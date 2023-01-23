@@ -1,40 +1,54 @@
 import { useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
+import UserExerciseList from "./UserExerciseList"
+
+
 
 function WorkoutDetails(props){
 
-    const {getUserExercises, userExercises} = props
+    const navigate = useNavigate()
+
+    const {
+        getUserExercises,
+        userExercises,
+        deleteWorkout, 
+        deleteExercisesbyWorkout,
+        editExercise,
+        deleteOneExercise
+    } = props
+
     const {workoutId} = useParams()
 
-    const userExerciseList = userExercises.map(exercise => (
-        <div className="detailed-exercise">
-            <h1>{exercise.name}</h1>
+    userExercises.reverse()
 
-            {exercise.weightLifted && 
-            <p>Weight: {exercise.weightLifted}</p>}
+    const exerciseList = userExercises.map(exercise => {
+        return <UserExerciseList
+                {...exercise}
+                edit = {editExercise}
+                deleteOne = {deleteOneExercise}
+                id = {exercise._id}
+            />
+    })
 
-            {exercise.reps && 
-            <p>Reps: {exercise.reps}</p>}
 
-            {exercise.sets && 
-            <p>Sets: {exercise.sets}</p>}
-
-            {exercise.distance && 
-            <p>Distance: {exercise.distance}</p>}
-
-            {exercise.time && 
-            <p>Time: {exercise.time}</p>}
-        </div>
-    ))
+    function handleDelete(){
+        deleteWorkout(workoutId)
+        deleteExercisesbyWorkout(workoutId)
+        navigate('/pastworkouts')
+    }
 
     useEffect(() => {
         getUserExercises(workoutId)
     }, [])
 
     return(
-        <div className="workout-details-container">
-            <h1>Workout Details</h1>
-            {userExerciseList}
+        <div className="workout-details-grid">
+            <div className="workout-details-column1"></div>
+            <div className="workout-details-container">
+                <h1>Workout Details</h1>
+                {exerciseList}
+                <button onClick={() => handleDelete()}>Delete Workout</button>
+            </div>
         </div>
     )
 }

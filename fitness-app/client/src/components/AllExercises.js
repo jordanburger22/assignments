@@ -5,7 +5,7 @@ function AllExercises(props){
     const {baseExercises, filterExercises} = props
  
     const exerciseList = baseExercises.map(exercise => (
-        <div > 
+        <div className="exercise-info"> 
             <h1>{exercise.name}</h1>
             <h3>Main Muscle Group: {exercise.mainMuscleWorked}</h3>
             {exercise.secondaryMuscleWorked && 
